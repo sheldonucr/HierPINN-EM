@@ -38,7 +38,7 @@ Run `first_stage_single_segment_stress_predictor.py` to train the stress predict
 - Second Stage:
 Run `second_stage_atom_flux_predictor.py` to train the atom flux predictor. The path to the random interconnects (test set) should be passed through `--data-path` argument. The path to the trained first stage model should be passed through `--model-path` argument.
 
-- An example first stage model is already trained using first 8000 cases in `/fermi_data/shared/wentian/hierpinn_em/EMdataset_10seg_1n2/` and the trained model is saved in `./ckp/trial_function_mlp_20.pkl`. You can directly run the second stage `second_stage_atom_flux_predictor.py` on test set in `/fermi_data/shared/wentian/hierpinn_em/test_trees/` using the trained first stage model.
+- An example first stage model is already trained using first 8000 cases in `/fermi_data/shared/wentian/hierpinn_em/EMdataset_10seg_1n2/` and the trained model is saved in `./ckpt/trial_function_mlp_20.pkl`. You can directly run the second stage `second_stage_atom_flux_predictor.py` on test set in `/fermi_data/shared/wentian/hierpinn_em/test_trees/` using the trained first stage model.
 
 ## Publications
 
