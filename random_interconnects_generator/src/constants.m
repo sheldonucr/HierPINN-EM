@@ -1,0 +1,19 @@
+failResis=0.1;              % Resistance change for failure (Growth phase)
+
+D0=7.5e-8;                  % Maximum diffusion coefficient (at infinite temperature; m2 / s)
+E=1.69e-19;                 % Charge of electron
+Ea=0.84*E;                  % Activation energy for diffusion in dimensions of (J atom−1)
+kB=1.3806e-23;              % Boltzmann constant.
+Da=D0*exp(-Ea/(kB*T));      % Diffusion coefficient (m2 / s)
+EffB=1e11;                  % Effective bulk elasticity modulus
+Omega=1.182e-29;            % Atomic lattice volume
+Cu_resis=3e-8;              % Resistivity of copper
+Ta_resis=1.76e-7;           % Resistivity of titanium (barrier)
+hTa=(2.5e-3)/1e6;           % Barrier layer thickness in m
+%viaDiam=0.1;               % Diameter of via in um
+viaDiam=0.06;               % Diameter of via in um
+%viaDiam=0.05;
+height=0.095;               % Thickness of wire in um
+Z=10;
+kappa=(Da*EffB*Omega)/(kB*T);
+critStress=5e8;
