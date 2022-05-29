@@ -8,7 +8,7 @@ HierPINN-EM is a fast learning-based electromigration (EM) analysis method for m
 
 First Stage | Second Stage
 :-----:|:-----:
-<img align="middle" src="./assets/stress_predictor_model.png" alt="first stage"  height=300/> | <img align="middle" src="./assets/flux_predictor_model.png" alt="second stage"  height=300/>
+<img align="middle" src="./assets/stress_predictor_model.png" alt="first stage"  height=200/> | <img align="middle" src="./assets/flux_predictor_model.png" alt="second stage"  height=200/>
 
 
 ## Installation
