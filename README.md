@@ -29,6 +29,7 @@ $ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=
 
 ## Instructions
 - Random Interconnects Generation:
+Generate multi-segment interconnect trees and COMSOL results by following the instructions in [Random Interconnects Generation](https://github.com/wtjin1992/Random_Interconnects_Gen).
 First, run `line.py` to create multi-segment straight wires or run `autoGenGeo_correct.py` to create multi-segment interconnect trees. The results are saved in `.geo` and `.mat` files inside `/data` folder.
 Second, launch Matlab on server with command `comsol mphserver matlab` and run `simulate.m` in Matlab. The Comsol results will be filled into `.mat` files inside `/data` folder.
 
