@@ -19,7 +19,7 @@ First Stage | Second Stage
 
 ## Installation
 
-HierPINN-EM requires TensorFlow 1.x to be installed as backend. It was tested on Fermi server in Anaconda virtual env with following dependencies:
+HierPINN-EM requires Pytorch to be installed as backend. It was tested on Fermi server in Anaconda virtual env with following dependencies:
 
 - python=3.8.12
 - scipy=1.7.3
