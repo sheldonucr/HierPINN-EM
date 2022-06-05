@@ -27,6 +27,9 @@ HierPINN-EM requires Pytorch to be installed as backend. It was tested on Fermi 
 - cudatoolkit=11.0.221
 - numpy=1.21.5
 - matplotlib=3.5.1
+- ...
+
+Please refer to the `requirements.txt` file for more info on dependent packages.
 
 To enable the gpu version of pytorch, please install pytorch using following command on Fermi (GPU: TITAN RTX, Driver: NVIDIA-SMI 450.51.05  Driver Version: 450.51.05  CUDA Version: 11.0):
 ```
