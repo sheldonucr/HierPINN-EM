@@ -29,7 +29,7 @@ HierPINN-EM requires Pytorch to be installed as backend. It was tested on Fermi 
 - matplotlib=3.5.1
 - ...
 
-Please refer to the `requirements.txt` file for more info on dependent packages.
+Please refer to the [requirements.txt](requirements.txt) file for more info on dependent packages.
 
 To enable the gpu version of pytorch, please install pytorch using following command on Fermi (GPU: TITAN RTX, Driver: NVIDIA-SMI 450.51.05  Driver Version: 450.51.05  CUDA Version: 11.0):
 ```
@@ -40,22 +40,24 @@ $ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=
 - Random Interconnects Generation:
 
   Generate multi-segment interconnect trees and COMSOL results by following the instructions in [Random Interconnects Generation](https://github.com/wtjin1992/Random_Interconnects_Gen).
-  
-  First, run `line.py` to create multi-segment straight wires or run `autoGenGeo_correct.py` to create multi-segment interconnect trees. The results are saved in `.geo` and `.mat` files inside `/data` folder.
 
-  Second, launch Matlab on server with command `comsol mphserver matlab` and run `simulate.m` in Matlab. The Comsol results will be filled into `.mat` files inside `/data` folder.
+  First, run [line.py](https://github.com/wtjin1992/Random_Interconnects_Gen/blob/main/line.py) to create multi-segment straight wires or run [autoGenGeo_correct.py](https://github.com/wtjin1992/Random_Interconnects_Gen/blob/main/autoGenGeo_correct.py) to create multi-segment interconnect trees. The results will be saved in `.geo` and `.mat` files inside `./data` folder.
+
+  Second, launch Matlab on server with command `comsol mphserver matlab` and run [simulate.m](https://github.com/wtjin1992/Random_Interconnects_Gen/blob/main/simulate.m) in Matlab. The COMSOL results will be filled into `.mat` files inside `./data` folder.
 
 - First Stage:
 
-  Run `first_stage_single_segment_stress_predictor.py` to train the stress predictor. The path to the random interconnects (training dataset) generated in the previous step should be passed through `--data-path` argument.
+  Run [first_stage_single_segment_stress_predictor.py](first_stage_single_segment_stress_predictor.py) to train the stress predictor. The path to the random interconnects (training dataset) generated in the previous step should be passed through `--data-path` argument.
 
 - Second Stage:
 
-  Run `second_stage_atom_flux_predictor.py` to train the atom flux predictor. The path to the random interconnects (test set) should be passed through `--data-path` argument. The path to the trained first stage model should be passed through `--model-path` argument.
+  Run [second_stage_atom_flux_predictor.py](second_stage_atom_flux_predictor.py) to train the atom flux predictor. The path to the random interconnects (test set) should be passed through `--data-path` argument. The path to the trained first stage model should be passed through `--model-path` argument.
 
-- An example first stage model is already trained using first 8000 cases in `/fermi_data/shared/wentian/hierpinn_em/EMdataset_10seg_1n2/` and the trained model is saved in `./ckpt/trial_function_mlp_20.pkl`. You can directly run the second stage `second_stage_atom_flux_predictor.py` on test set in `/fermi_data/shared/wentian/hierpinn_em/test_trees/` using the trained first stage model.
+- An example first stage model is already trained using first 8000 cases in folder `/fermi_data/shared/wentian/hierpinn_em/EMdataset_10seg_1n2/` on lab server, and the trained model is saved in `./ckpt/trial_function_mlp_20.pkl`. You can directly run the second stage [second_stage_atom_flux_predictor.py](second_stage_atom_flux_predictor.py) on test set in foler `/fermi_data/shared/wentian/hierpinn_em/test_trees/` on lab server using this trained first stage model.
 
 ## Publications
+
+Submitted to ICCAD 2022: [iccad22_hierarchical_pinn](https://github.com/wtjin1992/iccad22_hierarchical_pinn) (under review)
 
 ```
 To be added...
