@@ -57,7 +57,7 @@ $ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=
 
 ## Publications
 
-Submitted to ICCAD 2022: [iccad22_hierarchical_pinn](https://github.com/wtjin1992/iccad22_hierarchical_pinn) (under review)
+Accepted to ICCAD 2022: [iccad22_hierarchical_pinn](https://github.com/wtjin1992/iccad22_hierarchical_pinn)
 
 ```
 @INPROCEEDINGS{Jin:ICCAD'22,
