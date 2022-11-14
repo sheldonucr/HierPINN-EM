@@ -60,7 +60,15 @@ $ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=
 Submitted to ICCAD 2022: [iccad22_hierarchical_pinn](https://github.com/wtjin1992/iccad22_hierarchical_pinn) (under review)
 
 ```
-To be added...
+@INPROCEEDINGS{Jin:ICCAD'22,
+  author={Jin, Wentian and Chen, Liang and Lamichhane, Subed and Kavousi, Mohammadamir and Tan, Sheldon X.-D.},
+  title={HierPINN-EM: Fast Learning-Based Electromigration Analysis for Multi-Segment Interconnects Using Hierarchical Physics-informed Neural Network}, 
+  booktitle = iccad,
+  year={2022},
+  volume={},
+  number={},
+  pages={1-9},
+  doi={10.1145/3508352.3549371}}
 ```
 
 ## The Team
